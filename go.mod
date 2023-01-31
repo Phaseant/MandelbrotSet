@@ -1,3 +1,3 @@
-module github.com/Phaseant/mandelbrotSet/v2
+module github.com/Phaseant/mandelbrotSet
 
 go 1.19
