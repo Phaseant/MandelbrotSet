@@ -1,4 +1,4 @@
-package mandelbrodSet
+package mandelbrotSet
 
 import (
 	"image"
