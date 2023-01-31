@@ -40,7 +40,7 @@ func CreateMandelbrodImage(width, height int, filename string) {
 
 	//check if filename has extension
 	filename = strings.ReplaceAll(filename, ".png", "")
-	filename += "_" + strconv.Itoa(width) + " x " + strconv.Itoa(height) + ".png"
+	filename += "_" + strconv.Itoa(width) + "x" + strconv.Itoa(height) + ".png"
 
 	//create a file
 	file, err := os.Create(filename)
