@@ -32,7 +32,7 @@ var (
 )
 
 // Creates PNG image with mandelbrod set.
-func CreateMandelbrodImage(width, height int, filename string) {
+func CreateMandelbrodImage(width int, filename string) {
 	const (
 		xmin, ymin = -2, -2
 		xmax, ymax = 2, 2
@@ -40,7 +40,7 @@ func CreateMandelbrodImage(width, height int, filename string) {
 
 	//check if filename has extension
 	filename = strings.ReplaceAll(filename, ".png", "")
-	filename += "_" + strconv.Itoa(width) + "x" + strconv.Itoa(height) + ".png"
+	filename += "_" + strconv.Itoa(width) + "x" + strconv.Itoa(width) + ".png"
 
 	//create a file
 	file, err := os.Create(filename)
@@ -49,11 +49,11 @@ func CreateMandelbrodImage(width, height int, filename string) {
 	}
 
 	//create an image and populate it
-	img := image.NewRGBA(image.Rect(0, 0, width, height))
+	img := image.NewRGBA(image.Rect(0, 0, width, width))
 	for px := 0; px < width; px++ {
-		x := float64(px)/float64(height)*(xmax-xmin) + xmin
-		for py := 0; py < height; py++ {
-			y := float64(py)/float64(height)*(ymax-ymin) + ymin
+		x := float64(px)/float64(width)*(xmax-xmin) + xmin
+		for py := 0; py < width; py++ {
+			y := float64(py)/float64(width)*(ymax-ymin) + ymin
 			z := complex(x, y)
 			img.Set(px, py, mandelbrod(z))
 		}
