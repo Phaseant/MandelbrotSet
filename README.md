@@ -1,5 +1,5 @@
 # MandelbrotSet
-Go package to create image of colorful Mandelbrot set
+Go package to create an image of colorful Mandelbrot set
 
 ## Install
 > go get github.com/Phaseant/MandelbrotSet@latest
