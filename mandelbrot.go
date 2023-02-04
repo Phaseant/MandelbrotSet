@@ -32,7 +32,7 @@ var (
 )
 
 // Creates PNG image with mandelbrod set. Image filename looks like "filename_width x width.png"
-func CreateMandelbrodImage(width int, filename string) {
+func CreateMandelbrotImage(width int, filename string) {
 	const (
 		xmin, ymin = -2, -2
 		xmax, ymax = 2, 2
